@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffe4f0">
+  <title>Món quà 20/10 – Lớp 9A3 🌷</title>
+  <style>
+    :root{--pink:#e9438b;--deep:#a83d70;--pale:#fff0f6}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--deep);background:var(--pale)}
+    #app{position:relative;min-height:100vh;min-height:100dvh;overflow:hidden;background:linear-gradient(145deg,#ffe1ee,#fff9fc 55%,#ffd4e7)}
+    #progress{position:fixed;z-index:10;top:0;left:0;height:4px;width:0;background:var(--pink);transition:width .3s}
+    #petals{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+    .petal{position:absolute;bottom:-40px;animation:floatUp linear forwards}
+    @keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.8}100%{transform:translateY(-110vh) rotate(300deg);opacity:0}}
+    .scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:22px 14px;opacity:0;visibility:hidden;transition:opacity .45s ease;z-index:2}
+    .scene.active{opacity:1;visibility:visible}
+    .card{width:min(100%,490px);max-height:84dvh;overflow:auto;text-align:center;padding:24px 19px;border:1px solid #fff;border-radius:26px;background:rgba(255,255,255,.92);box-shadow:0 10px 30px #c34c8018}
+    .emoji{font-size:clamp(35px,10vw,58px)}
+    h1{font-size:clamp(27px,7vw,39px);line-height:1.28;color:#df4389;margin:12px 0}
+    p{font-size:16px;line-height:1.8;margin:12px 0}
+    .flowers{font-size:30px;letter-spacing:3px;margin:12px 0}
+    .small{font-size:13px;color:#b76b8e}
+    button{font:700 15px system-ui,sans-serif;border:0;border-radius:30px;padding:13px 18px;color:white;background:linear-gradient(100deg,#f65b9f,#e93e8b);cursor:pointer;touch-action:manipulation}
+    button.secondary{background:#ffe1ef;color:#b63b75}
+    .actions{display:grid;gap:10px;margin-top:18px}
+    #musicBox{position:fixed;right:10px;bottom:10px;z-index:20;width:min(48vw,190px);text-align:center}
+    #musicBox button{font-size:12px;padding:9px 11px;max-width:100%}
+    #player{display:none;margin-top:7px;background:white;border-radius:12px;overflow:hidden}
+    #player.open{display:block}#player iframe{display:block;width:100%;height:108px;border:0}
+    #finalMessage{display:none}#finalMessage.show{display:block;animation:appear .8s ease both}
+    @keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .footer{font-size:12px;color:#bf7396}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="progress"></div><div id="petals" aria-hidden="true"></div>
+  <div id="musicBox"><button id="musicButton" type="button">🎵 Bấm để mở nhạc</button><div id="player"></div></div>
+  <section class="scene active"><div class="card"><div class="emoji">🌸💗🌸</div><p>Một món quà nhỏ dành tặng...</p><h1>Ngày 20 tháng 10</h1><p>Ngày của những bông hoa xinh đẹp<br>và những người phụ nữ tuyệt vời 🌷</p><div class="flowers">🌷 🌸 🌷</div><p class="small">Chúc mừng ngày Phụ nữ Việt Nam 20/10!<br>Nếu nhạc không tự phát, hãy bấm nút 🎵 nhé.</p></div></section>
+  <section class="scene"><div class="card"><div class="emoji">💐✨💐</div><h1>Gửi cô giáo kính yêu</h1><p>Nhân ngày Phụ nữ Việt Nam 20/10,<br>chúng em kính chúc cô luôn mạnh khỏe,<br>hạnh phúc và ngập tràn niềm vui.</p><p>🌷 Cảm ơn cô đã tận tâm dạy dỗ,<br>dìu dắt chúng em mỗi ngày.<br>Mong cô luôn giữ nụ cười rạng rỡ<br>và mãi hạnh phúc với nghề mình yêu.</p><div class="flowers">🌹 🌸 🌹</div></div></section>
+  <section class="scene"><div class="card"><div class="emoji">🎀💕🎀</div><h1>Gửi các bạn nữ lớp 9A3</h1><p>Chúc các bạn luôn vui vẻ, tự tin,<br>học giỏi và gặp thật nhiều may mắn!</p><p>Mong mỗi ngày đến lớp đều đầy ắp<br>tiếng cười và những kỷ niệm đẹp.<br>Chúc các bạn luôn được yêu thương,<br>tỏa sáng theo cách riêng của mình! ✨</p><div class="flowers">🌷 🩷 🌷</div></div></section>
+  <section class="scene"><div class="card"><div class="emoji">🌸💝🌸</div><h1>Một lời chúc chung</h1><p>Chúc cô và tất cả các bạn nữ<br>có một ngày 20/10 thật đáng nhớ!</p><p>Mong những điều tốt đẹp nhất<br>sẽ luôn đồng hành cùng mọi người.<br>Hôm nay vui vẻ, ngày mai hạnh phúc,<br>mỗi ngày đều có lý do để mỉm cười. 💗</p><div class="flowers">🌹 🌷 🌹</div></div></section>
+  <section class="scene"><div class="card"><div class="emoji">💖💗💖</div><div id="finalMessage"><div class="flowers">🌸 💗 🌸</div><h1>Chúc mừng 20/10!</h1><p>💐 Chúc các bạn nữ lớp 9A3 💐</p><h1>20/10 vui vẻ! 💖</h1><p>🌷 Luôn vui tươi, học giỏi,<br>vui vẻ và hạnh phúc nhaaa! 🌷</p><div class="flowers">💕 🌹 💕</div></div><div class="actions"><button class="secondary" id="wishButton" type="button">💝 Lời chúc bí mật</button><button class="secondary" id="restartButton" type="button">🌸 Xem lại từ đầu</button></div><p class="footer">💗 Gửi ngàn yêu thương đến 9A3 💗</p></div></section>
+</div>
+<script>
+(() => {
+  'use strict';
+  const scenes = Array.from(document.querySelectorAll('.scene'));
+  const progress = document.getElementById('progress');
+  const petals = document.getElementById('petals');
+  const player = document.getElementById('player');
+  const musicButton = document.getElementById('musicButton');
+  const finalMessage = document.getElementById('finalMessage');
+  const DURATION = 15000;
+  let current = 0, timer = null, hasStarted = false;
+
+  function showScene(index) {
+    current = Math.max(0, Math.min(index, scenes.length - 1));
+    scenes.forEach((scene, i) => scene.classList.toggle('active', i === current));
+    progress.style.width = `${((current + 1) / scenes.length) * 100}%`;
+    if (current === scenes.length - 1) finalMessage.classList.add('show');
+  }
+  function stopTimer() { if (timer !== null) { clearInterval(timer); timer = null; } }
+  function startShow() {
+    stopTimer(); hasStarted = true;
+    timer = setInterval(() => {
+      if (current < scenes.length - 1) showScene(current + 1);
+      else stopTimer();
+    }, DURATION);
+  }
+  function openMusic() {
+    player.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/4BUlpxfKAsg?autoplay=1&playsinline=1&rel=0" title="Nhạc 20/10" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    player.classList.add('open');
+    musicButton.textContent = '🎵 Mở / phát lại nhạc';
+  }
+  musicButton.addEventListener('click', openMusic);
+  document.getElementById('wishButton').addEventListener('click', () => {
+    alert('💗 Chúc cô và các bạn nữ lớp 9A3 luôn vui vẻ, hạnh phúc và gặp thật nhiều điều tốt đẹp! Chúc mừng 20/10! 🌸');
+  });
+  document.getElementById('restartButton').addEventListener('click', () => {
+    showScene(0); startShow();
+  });
+  const symbols = ['💗','💕','🌸','🌷','✨','💖','🌺'];
+  function addPetal() {
+    if (petals.childElementCount >= 12) return;
+    const item = document.createElement('span');
+    item.className = 'petal';
+    item.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    item.style.left = `${Math.random() * 100}%`;
+    item.style.fontSize = `${15 + Math.random() * 16}px`;
+    item.style.animationDuration = `${8 + Math.random() * 5}s`;
+    petals.appendChild(item);
+    item.addEventListener('animationend', () => item.remove(), {once:true});
+  }
+  setInterval(addPetal, 1200);
+  window.addEventListener('load', () => { if (!hasStarted) startShow(); });
+})();
+</script>
+</body>
+</html>
